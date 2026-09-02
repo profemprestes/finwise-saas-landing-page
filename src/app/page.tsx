@@ -206,7 +206,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-brand-blue text-brand-white selection:bg-brand-yellow selection:text-brand-blue">
+    <div className="relative w-full overflow-hidden bg-brand-blue text-brand-white selection:bg-brand-yellow selection:text-brand-blue font-sans">
       {/* ==================== HERO PRINCIPAL ==================== */}
       <Hero />
 
@@ -366,7 +366,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Grid de 4 Tarjetas de Servicios */}
+          {/* Grid de 4 Tarjetas de Servicios en la maqueta del prototipo */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full text-left">
             {/* SERVICIO 1: EXPRESS */}
             <article className="group relative rounded-[28px] p-6 bg-brand-blue-deep/90 border border-brand-white/20 shadow-2xl overflow-hidden flex flex-col justify-between min-h-[460px] transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-yellow/60">
@@ -409,21 +409,16 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedService(SERVICES_DATA.express)}
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all duration-300 cursor-pointer"
-                  >
-                    <span>Ficha Técnica</span>
-                  </button>
-                  <Link
-                    href="/servicios/envios-express"
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-white/15 text-brand-white hover:bg-brand-white/25 border border-brand-white/20 transition-all duration-300"
-                  >
-                    <span>Ver Más</span>
-                  </Link>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedService(SERVICES_DATA.express)}
+                  className="w-full inline-flex items-center justify-between font-subheading font-bold uppercase tracking-wider text-xs px-5 py-3 rounded-full bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all duration-300 group/btn cursor-pointer"
+                >
+                  <span>Ficha Técnica</span>
+                  <span className="w-6 h-6 rounded-full bg-brand-blue/15 flex items-center justify-center shrink-0 ml-1 group-hover/btn:translate-x-1 transition-transform">
+                    <HiArrowRight className="text-xs text-brand-blue" />
+                  </span>
+                </button>
               </div>
             </article>
 
@@ -468,21 +463,16 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedService(SERVICES_DATA.lowcost)}
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all duration-300 cursor-pointer"
-                  >
-                    <span>Ficha Técnica</span>
-                  </button>
-                  <Link
-                    href="/servicios/envios-lowcost"
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-white/15 text-brand-white hover:bg-brand-white/25 border border-brand-white/20 transition-all duration-300"
-                  >
-                    <span>Ver Más</span>
-                  </Link>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedService(SERVICES_DATA.lowcost)}
+                  className="w-full inline-flex items-center justify-between font-subheading font-bold uppercase tracking-wider text-xs px-5 py-3 rounded-full bg-brand-white/15 text-brand-white hover:bg-brand-yellow hover:text-brand-blue border border-brand-white/20 transition-all duration-300 group/btn cursor-pointer"
+                >
+                  <span>Ficha Técnica</span>
+                  <span className="w-6 h-6 rounded-full bg-brand-white/20 group-hover/btn:bg-brand-blue/15 flex items-center justify-center shrink-0 ml-1 group-hover/btn:translate-x-1 transition-transform">
+                    <HiArrowRight className="text-xs" />
+                  </span>
+                </button>
               </div>
             </article>
 
@@ -527,21 +517,16 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedService(SERVICES_DATA.flex)}
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all duration-300 cursor-pointer"
-                  >
-                    <span>Ficha Técnica</span>
-                  </button>
-                  <Link
-                    href="/servicios/enviosflex"
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-white/15 text-brand-white hover:bg-brand-white/25 border border-brand-white/20 transition-all duration-300"
-                  >
-                    <span>Ver Más</span>
-                  </Link>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedService(SERVICES_DATA.flex)}
+                  className="w-full inline-flex items-center justify-between font-subheading font-bold uppercase tracking-wider text-xs px-5 py-3 rounded-full bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all duration-300 group/btn cursor-pointer"
+                >
+                  <span>Ficha Técnica</span>
+                  <span className="w-6 h-6 rounded-full bg-brand-blue/15 flex items-center justify-center shrink-0 ml-1 group-hover/btn:translate-x-1 transition-transform">
+                    <HiArrowRight className="text-xs text-brand-blue" />
+                  </span>
+                </button>
               </div>
             </article>
 
@@ -586,21 +571,16 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedService(SERVICES_DATA['3pl'])}
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all duration-300 cursor-pointer"
-                  >
-                    <span>Ficha Técnica</span>
-                  </button>
-                  <Link
-                    href="/servicios/plan-emprendedores"
-                    className="inline-flex items-center justify-center font-subheading font-bold uppercase tracking-wider text-xs px-3 py-3 rounded-full bg-brand-white/15 text-brand-white hover:bg-brand-white/25 border border-brand-white/20 transition-all duration-300"
-                  >
-                    <span>Ver Más</span>
-                  </Link>
-                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedService(SERVICES_DATA['3pl'])}
+                  className="w-full inline-flex items-center justify-between font-subheading font-bold uppercase tracking-wider text-xs px-5 py-3 rounded-full bg-brand-white/15 text-brand-white hover:bg-brand-yellow hover:text-brand-blue border border-brand-white/20 transition-all duration-300 group/btn cursor-pointer"
+                >
+                  <span>Ficha Técnica</span>
+                  <span className="w-6 h-6 rounded-full bg-brand-white/20 group-hover/btn:bg-brand-blue/15 flex items-center justify-center shrink-0 ml-1 group-hover/btn:translate-x-1 transition-transform">
+                    <HiArrowRight className="text-xs" />
+                  </span>
+                </button>
               </div>
             </article>
           </div>
@@ -672,7 +652,7 @@ export default function HomePage() {
                   }`}
                 >
                   <TabIcon className={`text-base ${isActive ? 'text-brand-yellow' : 'text-brand-blue'}`} />
-                  <span>{ind.tab}</span>
+                  <span>{ind.title.split(' ')[0]}</span>
                 </button>
               );
             })}
@@ -777,7 +757,7 @@ export default function HomePage() {
 
           {/* Asymmetric Bento Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch text-left">
-            {/* Bento Card 1: Logística E-Commerce (7 cols) */}
+            {/* Bento Card 1: Logística E-Commerce (7 cols) con imagen 3D flotante como en prototipo */}
             <div className="lg:col-span-7 rounded-[32px] p-2 bg-brand-blue-deep/90 border border-brand-white/20 shadow-2xl hover:-translate-y-1 transition-transform duration-300 flex flex-col justify-between">
               <div className="p-6 sm:p-8 rounded-[24px] bg-brand-blue border border-brand-white/15 h-full flex flex-col justify-between space-y-6 relative overflow-hidden">
                 <HiShoppingBag className="absolute -right-6 -bottom-6 text-[14rem] text-brand-white/[0.03] pointer-events-none" />
@@ -792,13 +772,24 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <div className="space-y-1">
-                    <h3 className="text-3xl sm:text-4xl font-display uppercase tracking-tight text-brand-white">
-                      Logística para Tiendas Online
-                    </h3>
-                    <p className="text-brand-white/85 text-xs sm:text-sm leading-relaxed font-sans font-light">
-                      Gestión de última milla pensada para emprendimientos y comercios en expansión. Optimizamos tus costos de envío con retiros pactados y atención directa.
-                    </p>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="space-y-1">
+                      <h3 className="text-3xl sm:text-4xl font-display uppercase tracking-tight text-brand-white">
+                        Logística para Tiendas Online
+                      </h3>
+                      <p className="text-brand-white/85 text-xs sm:text-sm leading-relaxed font-sans font-light">
+                        Gestión de última milla pensada para emprendimientos y comercios en expansión. Optimizamos tus costos de envío con retiros pactados y atención directa.
+                      </p>
+                    </div>
+                    <div className="hidden sm:flex shrink-0 w-24 h-24 items-center justify-center">
+                      <Image
+                        src="/moto_envios_3d.png"
+                        alt="Moto Envíos 3D"
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-contain filter drop-shadow-xl transform hover:scale-110 transition-transform"
+                      />
+                    </div>
                   </div>
 
                   <ul className="space-y-2.5 pt-2">
@@ -818,17 +809,15 @@ export default function HomePage() {
                 </div>
 
                 <div className="pt-4 border-t border-brand-white/15 relative z-10 flex justify-end">
-                  <a
-                    href={siteDetails.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full font-subheading uppercase tracking-wider font-bold px-6 py-3 text-xs bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all group"
+                  <Link
+                    href="/contacto#plan"
+                    className="inline-flex items-center gap-2 rounded-full font-subheading uppercase tracking-wider font-bold px-6 py-3 text-xs bg-brand-white/15 text-brand-white hover:bg-brand-yellow hover:text-brand-blue border border-brand-white/20 transition-all group"
                   >
-                    <span>Solicitar Plan PyME</span>
-                    <span className="w-5 h-5 rounded-full bg-brand-blue/15 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                    <span>Abrir Cuenta Comercial</span>
+                    <span className="w-5 h-5 rounded-full bg-brand-white/20 group-hover:bg-brand-blue/15 flex items-center justify-center group-hover:translate-x-1 transition-transform">
                       <HiArrowRight className="text-xs" />
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -983,11 +972,13 @@ export default function HomePage() {
             <article className="group relative rounded-2xl p-6 sm:p-7 bg-brand-blue-deep/90 border border-brand-white/20 shadow-2xl overflow-hidden flex flex-col justify-between min-h-[420px] transition-all duration-300 hover:-translate-y-1">
               <FaInstagram className="absolute -right-6 -bottom-6 text-[14rem] text-brand-white/[0.04] pointer-events-none" />
               <div className="relative z-10 space-y-4">
-                <span className="text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase font-mono border border-rose-400/40 text-rose-300 bg-rose-500/10 inline-block w-fit">
-                  INSTAGRAM MDQ
-                </span>
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-gradient-to-tr from-[#f97316] via-[#e11d48] to-[#9333ea] text-white shadow-glow-ig transition-transform duration-300 group-hover:scale-110 text-2xl">
-                  <FaInstagram />
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase font-mono border border-rose-400/40 text-rose-300 bg-rose-500/10">
+                    INSTAGRAM MDQ
+                  </span>
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center bg-gradient-to-tr from-[#f97316] via-[#e11d48] to-[#9333ea] text-white shadow-glow-ig transition-transform duration-300 group-hover:scale-110 text-2xl">
+                    <FaInstagram />
+                  </div>
                 </div>
                 <div className="pt-2">
                   <h3 className="font-display text-4xl sm:text-5xl uppercase tracking-tight leading-none text-brand-white">
