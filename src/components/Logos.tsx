@@ -63,3 +63,5 @@ const Logos: React.FC = () => {
         </section>
     );
 };
+
+export default Logos;
