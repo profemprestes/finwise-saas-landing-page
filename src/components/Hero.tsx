@@ -63,17 +63,15 @@ const Hero: React.FC = () => {
                                 </span>
                             </Link>
 
-                            <a
-                                href={siteDetails.whatsappUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link
+                                href="/contacto"
                                 className="group inline-flex items-center justify-between gap-3 rounded-full font-subheading uppercase tracking-wider font-bold px-8 py-3.5 min-h-[52px] bg-brand-white/10 hover:bg-brand-white/20 text-brand-white border border-brand-white/30 hover:border-brand-white transition-all duration-300 w-full sm:w-auto text-base"
                             >
-                                <span className="truncate">WhatsApp Directo</span>
+                                <span className="truncate">Contactar Base</span>
                                 <span className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 bg-brand-white/20 text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-200">
                                     <HiArrowRight className="text-base" />
                                 </span>
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Métricas de Confianza */}
