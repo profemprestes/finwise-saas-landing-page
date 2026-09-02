@@ -4,4 +4,6 @@ export const ctaDetails = {
     primaryButtonText: 'Pedir Envío por WhatsApp',
     whatsappUrl: 'https://wa.me/542236602699',
     phoneCall: 'tel:+542236602699',
+    appStoreUrl: 'https://wa.me/542236602699',
+    googlePlayUrl: 'https://wa.me/542236602699',
 }
