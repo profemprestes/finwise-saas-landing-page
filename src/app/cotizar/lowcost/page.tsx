@@ -21,7 +21,7 @@ export default function CotizarLowCostPage() {
   const currentZona = ZONAS.find((z) => z.id === selectedZona) || ZONAS[0];
   const totalEstimado = currentZona.price * paquetes;
 
-  const whatsappLink = https://wa.me/542236602699?text= + encodeURIComponent(Hola, quiero cotizar un Envio LowCost.\n- Zona: \n- Paquetes: \n- Total: ARS );
+  const whatsappLink = 'https://wa.me/542236602699?text=' + encodeURIComponent('Hola, quiero cotizar un Envio LowCost.\n- Zona: \n- Paquetes: \n- Total: ARS ');
 
   return (
     <div className="bg-brand-blue text-brand-white min-h-screen pt-28 pb-16">

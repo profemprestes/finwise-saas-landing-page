@@ -22,7 +22,7 @@ export default function CotizarExpressPage() {
     setIsCalculated(true);
   };
 
-  const whatsappLink = https://wa.me/542236602699?text= + encodeURIComponent(Hola, quiero pedir un Envio Express.\n- Origen: \n- Destino: \n- Tarifa Estimada: ARS );
+  const whatsappLink = 'https://wa.me/542236602699?text=' + encodeURIComponent('Hola, quiero pedir un Envio Express.\n- Origen: \n- Destino: \n- Tarifa Estimada: ARS ');
 
   return (
     <div className="bg-brand-blue text-brand-white min-h-screen pt-28 pb-16">
