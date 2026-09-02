@@ -1,25 +1,28 @@
 # Design System: Envíos DosRuedas · Mensajería y Logística Urbana E-Commerce
 
 ## 1. Visual Theme & Atmosphere
-An electric, high-velocity, and dependable urban interface built for on-demand courier, express deliveries, and MercadoLibre Flex logistics in Mar del Plata. The design combines bold industrial-modern geometry with deep atmospheric elevation. The visual foundation marries high-energy Electric Speed Blue (`#0950F6`) with high-voltage Neon Yellow conversion accents (`#FFF12E`), deep Midnight Navy contrast containers (`#052C87`), and crisp Optical White cards (`#FFFFFF`).
+An electric, high-velocity, and dependable urban interface built for on-demand cadetería, express 30-90 min deliveries, and MercadoLibre Flex logistics in Mar del Plata. The design language fuses industrial-modern delivery speed with high-contrast accessibility and deep glassmorphic elevation.
 
-* **Density:** Daily App Balanced (5/10) — generous vertical section rhythm with high-clarity, concise interactive form & bento components.
-* **Variance:** Offset Asymmetric (6/10) — 12-column asymmetric splits (7:5 ratios), dynamic sticker badge tilt angles (-1° / 1° rotation), and non-generic bento feature grids.
-* **Motion:** Fluid Spring Choreography (6/10) — `stiffness: 100, damping: 20` spring physics with staggered cascade reveals, interactive 3D perspective card tilts, and perpetual pulsing status beacons.
+* **Aesthetic Mood:** Electric High-Velocity Urban, Industrial-Modern, High-Contrast Dependable.
+* **Density:** Balanced Delivery Interface (5/10) — generous vertical section rhythm (`py-16` to `py-28`) balanced with high-density data chips, interactive calculation forms, and bento metric blocks.
+* **Variance:** Offset Asymmetric Layouts (6/10) — 12-column asymmetric splits (7:5 ratios), intentional angular tilts (`-rotate-1` / `rotate-1`), and staggered card matrices.
+* **Depth & Elevation:** Deep Atmospheric Layers — subtle 3D perspective tilts, double-layered frosted glass borders (`bg-brand-white/10 border border-brand-white/20 shadow-2xl`), and radiant neon glow halos (`shadow-glow-yellow`, `shadow-glow-blue`).
 
 ---
 
 ## 2. Color Palette & Roles
 
-* **Electric Speed Blue** (`#0950F6`) — Primary brand canvas surface, hero section atmosphere, active brand borders, and key interactive highlights.
-* **Deep Midnight Navy** (`#052C87`) — High-contrast container fill, dark bento surfaces, dropdown menus, footer foundation, and custom scrollbar track.
-* **High-Voltage Neon Yellow** (`#FFF12E`) — Single primary conversion accent, hero CTAs, active status chips, icon highlight backdrops, and text selection fill (`selection:bg-brand-yellow selection:text-brand-blue`).
-* **Electric Sun Gold Hover** (`#FFF44A`) — Interactive hover state for primary yellow buttons, active chips, and energetic halo glows.
-* **Pure Optical White** (`#FFFFFF`) — High-contrast card core fills, interactive quote calculators, form surface backgrounds, and primary typography on dark surfaces.
-* **Slate Light Canvas** (`#F8FAFC`) — Alternative light section canvas fill for service breakdowns, trust grids, and tabular pricing data.
+* **Electric Speed Blue** (`#0950F6`) — Primary brand identity surface, hero canvas background, active header, primary accent borders, and dynamic route lines.
+* **Deep Midnight Navy** (`#052C87`) — High-contrast container fill, dark card core backgrounds, dropdown menus, footer foundations, and custom scrollbar track.
+* **High-Voltage Neon Yellow** (`#FFF12E`) — Primary conversion trigger, hero CTA pills, active navigation badges, icon highlight containers, and text selection background (`selection:bg-brand-yellow selection:text-brand-blue`).
+* **Electric Sun Gold Hover** (`#FFF44A`) — Interactive hover state for primary conversion buttons and active pill chips.
+* **Pure Optical White** (`#FFFFFF`) — High-contrast calculator cards, form inputs, primary headlines on dark backgrounds, and container cores.
+* **Slate Light Canvas** (`#F8FAFC`) — Alternative light section background fill for vision, trust metrics, and tabular pricing data.
+* **Slate Ink Dark** (`#0F172A`) — Body text and headings on light canvas surfaces (`text-brand-ink`).
 * **Frosted Glass White** (`rgba(255, 255, 255, 0.10)` – `rgba(255, 255, 255, 0.25)`) — Double-layered glassmorphic outer frames, navigation pills, secondary ghost buttons, and subtle divider strokes (`border-brand-white/20`).
 * **Social WhatsApp Green** (`#25D366`) — Direct WhatsApp chat CTA, floating quick-quote actions, and messaging beacon indicators.
 * **Social Facebook Blue** (`#1877F2`) — Social network channel icon and verification badges.
+* **Instagram Radiant Pink** (`#E1306C`) — Social channel icon and verification badges.
 
 > **Color Constraints:** Pure black (`#000000`) is strictly forbidden. Purple/neon-pink glows are banned. All glows must strictly radiate in brand yellow (`rgba(255, 241, 46, 0.40)`) or brand blue (`rgba(9, 80, 246, 0.30)`).
 
@@ -43,17 +46,7 @@ An electric, high-velocity, and dependable urban interface built for on-demand c
 
 ---
 
-## 4. Hero Section Architecture
-
-* **Headline Structure:** Heavy display uppercase layout with multi-tonal word contrast (`COTIZÁ TU` [White] `ENVÍO` [Neon Yellow] `EXPRESS` [White]).
-* **Layout Split:** Asymmetric 12-column desktop split (`grid-cols-1 lg:grid-cols-12`) pairing a 7-column narrative & feature-chip stack with a 5-column interactive floating card preview or 3D canvas simulation.
-* **Visual Atmosphere:** Large typographic watermark in background (`text-[16vw] text-brand-white/[0.03]`), subtle particle canvas, and glowing halo backdrops.
-* **Velocity Badges:** Pill-shaped status chips with intentional `-1°` / `1°` rotation tilts, high-voltage yellow borders, and pulsing icon beacons.
-* **Hero CTA Restraint:** Maximum 1 primary high-conversion pill button (`bg-brand-yellow text-brand-blue`) paired with instant phone/WhatsApp channel. No generic filler links.
-
----
-
-## 5. Component Stylings
+## 4. Component Stylings
 
 ### Buttons & Interactive Controls
 * **Primary Conversion CTA:**
@@ -84,7 +77,7 @@ An electric, high-velocity, and dependable urban interface built for on-demand c
 
 ---
 
-## 6. Layout Principles
+## 5. Layout Principles
 
 * **Max-Width Containment:** Centered `max-w-7xl` (1280px) container with responsive gutters (`px-4 sm:px-6 lg:px-8`).
 * **Section Rhythm:** Generous vertical padding (`py-16 sm:py-24 lg:py-28`) with clean translucent dividing lines (`border-t border-brand-white/20`).
@@ -94,16 +87,42 @@ An electric, high-velocity, and dependable urban interface built for on-demand c
 
 ---
 
-## 7. Motion & Interaction Philosophy
+## 6. Design System Notes for Stitch Generation (Prompting Block)
 
-* **Spring Physics:** `stiffness: 100, damping: 20` for fluid scroll reveals, modal entrances, and tab transitions.
-* **Staggered Orchestration:** List items and grid cards cascade into view using `delayChildren: 0.2, staggerChildren: 0.1`.
-* **Perpetual Micro-Interactions:** Pulsing status beacons (`animate-pulse` / `animate-ping`), infinite marquee logo scrolls (`logos-scroll 25s linear infinite`), and tactile hover lifts (`hover:-translate-y-1.5`).
-* **Performance Constraints:** Hardware-accelerated transitions only via `transform` and `opacity`. Never animate `top`, `left`, `width`, or `height`.
+> **Copy this exact block into Stitch generation prompts:**
+
+```markdown
+**DESIGN SYSTEM SPECIFICATIONS (ENVÍOS DOSRUEDAS):**
+- **Brand Colors:**
+  - Electric Speed Blue: #0950F6 (Primary canvas, borders & brand identity)
+  - Deep Midnight Navy: #052C87 (High-contrast containers & dark surfaces)
+  - High-Voltage Neon Yellow: #FFF12E (Primary CTA buttons, active status chips & selection)
+  - Sun Gold Hover: #FFF44A (Button hover states)
+  - Pure Optical White: #FFFFFF (Calculator cards, input forms & light surfaces)
+  - Slate Light Canvas: #F8FAFC (Secondary light section backgrounds)
+  - Slate Ink: #0F172A (Text on light backgrounds)
+  - WhatsApp Green: #25D366 (Direct messaging action)
+- **Typography:**
+  - Display Headlines: Anton (Uppercase, tracking-tight, leading-none)
+  - Subheadings, Chips, Nav & Buttons: Bebas Neue (Uppercase, tracking-wider, bold)
+  - Body & Form UI: Outfit (Light 300 to Regular 400, leading-relaxed)
+  - Prices, Numbers & Metrics: Geist Mono (Tabular numerals, bold)
+- **Component Geometry & Depth:**
+  - Outer Containers: Generously rounded (rounded-[28px] / rounded-[32px]) with frosted glass frames (bg-brand-white/10 border border-brand-white/20 shadow-2xl)
+  - Inner Cores: Clean nested cards (rounded-[20px]) with high contrast
+  - Primary CTAs: Pill-shaped (rounded-full) in Neon Yellow (#FFF12E) with Electric Blue text (#0950F6) and glowing halo (shadow-glow-yellow)
+  - Status Badges: Velocity pill chips with -1deg / 1deg tilt angle (-rotate-1 / rotate-1)
+- **Prohibitions & Anti-Patterns:**
+  - NO emojis in UI (use Phosphor Icons: ph-fill, ph-bold)
+  - NO Inter font or generic serif fonts
+  - NO pure black (#000000)
+  - NO purple/pink glow clichés
+  - NO fake 3-column equal generic card grids
+```
 
 ---
 
-## 8. Anti-Patterns (Banned AI Tells)
+## 7. Anti-Patterns (Banned AI Tells)
 
 * ❌ **No emojis** anywhere in UI headlines, body copy, or metadata badges — use Phosphor icons exclusively (`ph-fill`, `ph-bold`).
 * ❌ **No `Inter` font** or unstyled generic serif fonts (`Times New Roman`, `Georgia`, `Garamond`).
@@ -114,3 +133,4 @@ An electric, high-velocity, and dependable urban interface built for on-demand c
 * ❌ **No AI copywriting clichés** — avoid words like "Elevate", "Seamless", "Unleash", "Next-Gen". Use direct, concrete logistics terms ("Envíos en el día", "Tarifas transparentes", "Retiro y entrega en mano").
 * ❌ **No filler UI instructions** — "Scroll to explore", "Swipe down", bouncing chevrons are strictly banned.
 * ❌ **No overlapping illegible text layers** — every element must maintain clean spatial separation.
+
