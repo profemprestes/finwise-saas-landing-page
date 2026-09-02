@@ -1,7 +1,21 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
+/* 
+  ==========================================================================
+  SISTEMA DE DISEÑO: https://www.enviosdosruedas.com/
+  Definición de Tokens de Tema para Tailwind CSS v4
+  ==========================================================================
+*/
 @theme {
+  /* Colores Principales e Institucionales */
+  --color-primary: #0950F6;
+  --color-secondary: #052C87;
+  --color-surface: #F8FAFC;
+  --color-on-surface: #052C87;
+  --color-error: #EF4444;
+
+  /* Colores Específicos de Marca (DosRuedas) */
   --color-brand-blue: #0950F6;
   --color-brand-blue-deep: #052C87;
   --color-brand-navy: #052C87;
@@ -9,14 +23,18 @@
   --color-brand-yellow-hover: #FFF44A;
   --color-brand-canvas: #F8FAFC;
   --color-brand-white: #FFFFFF;
+
+  /* Redes Sociales y Estados Operativos */
   --color-social-facebook: #1877F2;
   --color-social-whatsapp: #25D366;
 
+  /* Tipografías del Sistema de Diseño */
   --font-sans: var(--font-outfit), 'Outfit', system-ui, -apple-system, sans-serif;
   --font-display: var(--font-anton), 'Anton', sans-serif;
   --font-subheading: var(--font-bebas-neue), "Bebas Neue", sans-serif;
   --font-mono: var(--font-geist-mono), "Geist Mono", monospace;
 
+  /* Efectos de Sombras e Iluminación (Glow Effects) */
   --shadow-glow-yellow: 0 0 25px rgba(255, 241, 46, 0.40);
   --shadow-glow-yellow-lg: 0 0 50px rgba(255, 241, 46, 0.55);
   --shadow-glow-blue: 0 0 25px rgba(9, 80, 246, 0.30);
@@ -26,12 +44,18 @@
   --shadow-antigravity-deep: 0 30px 60px -15px rgba(9, 80, 246, 0.35), 0 0 50px -10px rgba(255, 241, 46, 0.20);
 }
 
+/* 
+  ==========================================================================
+  VARIABLES CSS NATIVAS (:root)
+  ==========================================================================
+*/
 :root {
   --background: #0950F6;
   --foreground: #FFFFFF;
   --primary: #FFF12E;
   --primary-accent: #FFF44A;
   --secondary: #052C87;
+  --error: #EF4444;
   --foreground-accent: rgba(255, 255, 255, 0.85);
   --hero-background: #0950F6;
 
@@ -43,28 +67,40 @@
   --brand-white: #FFFFFF;
 }
 
+/* 
+  ==========================================================================
+  ESTILOS BASE Y CONFIGURACIÓN GLOBAL
+  ==========================================================================
+*/
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-size: 1rem;
-  line-height: 1.5rem;
-  background-color: #0950F6;
-  color: #FFFFFF;
-  font-family: var(--font-outfit), 'Outfit', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Estilo para la selección de texto */
 ::selection {
   background-color: #FFF12E;
   color: #0950F6;
 }
 
+/* 
+  ==========================================================================
+  CLASES DE UTILIDAD DINÁMICAS (Inclinación y Balance)
+  ==========================================================================
+*/
 .-rotate-1 {
   transform: rotate(-1deg);
 }
@@ -77,30 +113,44 @@ body {
   text-wrap: balance;
 }
 
-/* Custom Scrollbar adhering to DESIGN.md */
+/* 
+  ==========================================================================
+  BARRA DE DESPLAZAMIENTO PERSONALIZADA (Custom Scrollbar)
+  ==========================================================================
+*/
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #052C87;
-}
-::-webkit-scrollbar-thumb {
-  background: #0950F6;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 241, 46, 0.4);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #FFF12E;
+  background: #052C87; /* Azul Profundo */
 }
 
+::-webkit-scrollbar-thumb {
+  background: #0950F6; /* Azul Eléctrico */
+  border-radius: 4px;
+  border: 1px solid rgba(255, 241, 46, 0.4); /* Detalle Amarillo */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFF12E; /* Amarillo Neón al hacer Hover */
+}
+
+/* Ocultar barra de desplazamiento manteniendo funcionalidad */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
+/* 
+  ==========================================================================
+  AJUSTES ESPECÍFICOS DE COMPONENTES
+  ==========================================================================
+*/
 #logos svg {
   width: fit-content;
   height: 2.5rem;
