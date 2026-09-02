@@ -1,3 +1,4 @@
+import React from "react";
 import PricingColumn from "./PricingColumn";
 
 import { tiers } from "@/data/pricing";

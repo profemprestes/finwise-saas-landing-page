@@ -1,6 +1,7 @@
-import BenefitSection from "./BenefitSection"
+import React from "react";
+import BenefitSection from "./BenefitSection";
 
-import { benefits } from "@/data/benefits"
+import { benefits } from "@/data/benefits";
 
 const Benefits: React.FC = () => {
     return (

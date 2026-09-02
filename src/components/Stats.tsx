@@ -1,4 +1,5 @@
-import { stats } from "@/data/stats"
+import React from "react";
+import { stats } from "@/data/stats";
 
 const Stats: React.FC = () => {
     return (
