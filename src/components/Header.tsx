@@ -18,28 +18,30 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
-            <Container className="!px-0">
-                <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-brand-blue/95 backdrop-blur-md py-3.5 border-b border-brand-white/20 shadow-xl transition-all duration-300">
+            <Container>
+                <nav className="flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
-                        <FaFingerprint className="text-foreground min-w-fit w-7 h-7" />
-                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer">
-                            {siteDetails.siteName}
+                    <Link href="/" className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow rounded-xl">
+                        <div className="w-10 h-10 rounded-xl bg-brand-blue border border-brand-yellow p-2 flex items-center justify-center text-brand-yellow shadow-glow-yellow group-hover:scale-105 transition-transform">
+                            <FaFingerprint className="w-full h-full object-contain" />
+                        </div>
+                        <span className="font-display text-2xl uppercase tracking-tight text-brand-white flex items-center gap-1">
+                            <span>Fin</span><span className="text-brand-yellow">wise</span>
                         </span>
                     </Link>
 
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-6">
+                    <ul className="hidden md:flex items-center space-x-2">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
+                                <Link href={item.url} className="px-3.5 py-2 text-sm font-subheading tracking-wider uppercase rounded-xl text-brand-white/90 hover:text-brand-yellow hover:bg-brand-white/10 transition-all duration-200">
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
-                        <li>
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
+                        <li className="pl-2">
+                            <Link href="#cta" className="inline-flex items-center gap-2 rounded-full font-subheading uppercase tracking-wider font-bold px-6 py-2.5 text-xs bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all duration-300">
                                 Download
                             </Link>
                         </li>
@@ -50,12 +52,12 @@ const Header: React.FC = () => {
                         <button
                             onClick={toggleMenu}
                             type="button"
-                            className="bg-primary text-black focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
+                            className="p-2 rounded-xl bg-brand-white/15 text-brand-white hover:text-brand-yellow active:scale-95 transition-all"
                             aria-controls="mobile-menu"
                             aria-expanded={isOpen}
                         >
                             {isOpen ? (
-                                <HiOutlineXMark className="h-6 w-6" aria-hidden="true" />
+                                <HiOutlineXMark className="h-6 w-6 text-brand-yellow" aria-hidden="true" />
                             ) : (
                                 <HiBars3 className="h-6 w-6" aria-hidden="true" />
                             )}
@@ -69,27 +71,29 @@ const Header: React.FC = () => {
             <Transition
                 show={isOpen}
                 enter="transition ease-out duration-200 transform"
-                enterFrom="opacity-0 scale-95"
-                enterTo="opacity-100 scale-100"
-                leave="transition ease-in duration-75 transform"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-95"
+                enterFrom="opacity-0 -translate-y-2"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-100 transform"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 -translate-y-2"
             >
-                <div id="mobile-menu" className="md:hidden bg-white shadow-lg">
-                    <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
-                        {menuItems.map(item => (
-                            <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
-                                    {item.text}
+                <div id="mobile-menu" className="md:hidden max-w-7xl mx-auto px-4 pt-3 pb-4">
+                    <div className="bg-brand-blue-deep border border-brand-white/25 rounded-2xl p-4 shadow-2xl">
+                        <ul className="flex flex-col space-y-2">
+                            {menuItems.map(item => (
+                                <li key={item.text}>
+                                    <Link href={item.url} className="px-3 py-2 rounded-xl font-subheading text-base uppercase text-brand-white hover:text-brand-yellow hover:bg-brand-white/15 block transition-colors" onClick={toggleMenu}>
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li className="pt-2">
+                                <Link href="#cta" className="w-full text-center py-3 rounded-full bg-brand-yellow text-brand-blue font-subheading uppercase tracking-wider text-xs font-bold shadow-glow-yellow block hover:bg-brand-yellow-hover transition-colors" onClick={toggleMenu}>
+                                    Get Started
                                 </Link>
                             </li>
-                        ))}
-                        <li>
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit" onClick={toggleMenu}>
-                                Get Started
-                            </Link>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </Transition>
         </header>

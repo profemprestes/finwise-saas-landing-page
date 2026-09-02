@@ -1,17 +1,23 @@
-import React from 'react'
-import clsx from 'clsx'
+import React from 'react';
+import clsx from 'clsx';
 
-import { ctaDetails } from '@/data/cta'
+import { ctaDetails } from '@/data/cta';
 
 const PlayStoreButton = ({ dark }: { dark?: boolean }) => {
     return (
-        <a href={ctaDetails.googlePlayUrl}>
+        <a href={ctaDetails.googlePlayUrl} className="w-full sm:w-auto">
             <button
                 type="button"
-                className={clsx("flex items-center justify-center min-w-[205px] mt-3 px-6 h-14 rounded-full w-full sm:w-fit", { "text-white bg-foreground": dark, "text-foreground bg-white": !dark })}
+                className={clsx(
+                    "flex items-center justify-center min-w-[205px] mt-3 px-6 h-14 rounded-full w-full sm:w-fit transition-all duration-300 font-sans cursor-pointer group",
+                    {
+                        "bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow shadow-md": !dark,
+                        "bg-brand-white/10 hover:bg-brand-white/20 text-brand-white border border-brand-white/30 hover:border-brand-white": dark
+                    }
+                )}
             >
-                <div className="mr-3">
-                    <svg viewBox="30 336.7 120.9 129.2" width="30">
+                <div className="mr-3 shrink-0">
+                    <svg viewBox="30 336.7 120.9 129.2" width="24" height="24">
                         <path fill="#FFD400" d="M119.2,421.2c15.3-8.4,27-14.8,28-15.3c3.2-1.7,6.5-6.2,0-9.7  c-2.1-1.1-13.4-7.3-28-15.3l-20.1,20.2L119.2,421.2z">
                         </path>
                         <path fill="#FF3333" d="M99.1,401.1l-64.2,64.7c1.5,0.2,3.2-0.2,5.2-1.3  c4.2-2.3,48.8-26.7,79.1-43.3L99.1,401.1L99.1,401.1z">
@@ -22,17 +28,17 @@ const PlayStoreButton = ({ dark }: { dark?: boolean }) => {
                         </path>
                     </svg>
                 </div>
-                <div>
-                    <div className="text-xs">
+                <div className="text-left">
+                    <div className="text-[10px] uppercase font-subheading tracking-wider leading-none">
                         GET IT ON
                     </div>
-                    <div className="-mt-1 font-sans text-xl font-semibold">
+                    <div className="font-subheading text-lg font-bold tracking-wide uppercase leading-tight">
                         Google Play
                     </div>
                 </div>
             </button>
         </a>
-    )
-}
+    );
+};
 
-export default PlayStoreButton
+export default PlayStoreButton;

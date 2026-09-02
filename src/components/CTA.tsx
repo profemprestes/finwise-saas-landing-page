@@ -6,27 +6,35 @@ import PlayStoreButton from "./PlayStoreButton";
 
 const CTA: React.FC = () => {
     return (
-        <section id="cta" className="mt-10 mb-5 lg:my-20">
-            <div className="relative h-full w-full z-10 mx-auto py-12 sm:py-20">
-                <div className="h-full w-full">
-                    <div className="rounded-3xl opacity-95 absolute inset-0 -z-10 h-full w-full bg-[#050a02] bg-[linear-gradient(to_right,#12170f_1px,transparent_1px),linear-gradient(to_bottom,#12170f_1px,transparent_1px)] bg-[size:6rem_4rem]">
-                        <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_600px_at_50%_500px,#1C1C02,transparent)]"></div>
-                    </div>
+        <section id="cta" className="my-12 sm:my-20">
+            <div className="relative w-full rounded-[32px] p-2 bg-brand-white/10 border border-brand-white/20 shadow-2xl">
+                <div className="rounded-[24px] py-12 sm:py-20 px-6 sm:px-12 bg-brand-blue-deep relative overflow-hidden text-center">
+                    {/* Background glow decoration */}
+                    <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+                    <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-brand-blue/30 rounded-full blur-3xl pointer-events-none -z-0"></div>
 
-                    <div className="h-full flex flex-col items-center justify-center text-white text-center px-5">
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl">{ctaDetails.heading}</h2>
+                    <div className="relative z-10 flex flex-col items-center justify-center text-brand-white">
+                        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-subheading font-bold uppercase tracking-widest bg-brand-yellow text-brand-blue mb-5 shadow-glow-yellow">
+                            Get Started Today
+                        </span>
+                        
+                        <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-brand-white leading-tight mb-4 max-w-3xl">
+                            {ctaDetails.heading}
+                        </h2>
 
-                        <p className="mx-auto max-w-xl md:px-5">{ctaDetails.subheading}</p>
+                        <p className="mx-auto max-w-xl text-base sm:text-lg text-brand-white/85 font-sans font-light leading-relaxed mb-8">
+                            {ctaDetails.subheading}
+                        </p>
 
-                        <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
-                        <AppStoreButton />
-                        <PlayStoreButton />
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-fit mx-auto">
+                            <AppStoreButton />
+                            <PlayStoreButton dark />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default CTA

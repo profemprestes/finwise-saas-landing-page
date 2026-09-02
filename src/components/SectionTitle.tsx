@@ -7,7 +7,7 @@ interface SectionTitleProps {
 const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => {
     const existingClassName = children.props.className ?? "";
     return React.cloneElement(children, {
-        className: (existingClassName ? `${existingClassName} ` : "") + "text-3xl lg:text-5xl lg:leading-tight font-bold"
+        className: (existingClassName ? `${existingClassName} ` : "") + "font-display text-3xl sm:text-4xl lg:text-5xl uppercase tracking-tight text-brand-white leading-tight"
     });
 };
 
