@@ -1,3 +1,4 @@
+import React from "react";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing/Pricing";
@@ -11,10 +12,15 @@ import CTA from "@/components/CTA";
 
 const HomePage: React.FC = () => {
   return (
-    <>
+    <div className="relative w-full overflow-hidden bg-brand-blue text-brand-white">
+      {/* Hero Section */}
       <Hero />
+
+      {/* Logos Marquee / Grid */}
       <Logos />
-      <Container>
+
+      {/* Contenedor Principal de Secciones */}
+      <Container className="space-y-16 sm:space-y-24 lg:space-y-28 py-12 sm:py-16 lg:py-20 relative z-10">
         <Benefits />
 
         <Section
@@ -39,7 +45,7 @@ const HomePage: React.FC = () => {
         
         <CTA />
       </Container>
-    </>
+    </div>
   );
 };
 

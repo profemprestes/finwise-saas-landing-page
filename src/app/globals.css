@@ -3,14 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #FED835;
-  --secondary: #304fff;
+  --background: #0950F6;
+  --foreground: #FFFFFF;
+  --primary: #FFF12E;
+  --primary-accent: #FFF44A;
+  --secondary: #052C87;
+  --foreground-accent: rgba(255, 255, 255, 0.85);
+  --hero-background: #0950F6;
 
-  --primary-accent: #e5c230;
-  --foreground-accent: #454545;
-  --hero-background: #F3F3F5;
+  --brand-blue: #0950F6;
+  --brand-blue-deep: #052C87;
+  --brand-yellow: #FFF12E;
+  --brand-yellow-hover: #FFF44A;
+  --brand-canvas: #F8FAFC;
+  --brand-white: #FFFFFF;
 }
 
 html {
@@ -18,31 +24,43 @@ html {
 }
 
 body {
-  @apply text-lg;
-  
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Source Sans 3", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  @apply text-base bg-brand-blue text-brand-white font-sans selection:bg-brand-yellow selection:text-brand-blue overflow-x-hidden min-h-screen flex flex-col antialiased;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .-rotate-1 {
+    transform: rotate(-1deg);
+  }
+  .rotate-1 {
+    transform: rotate(1deg);
+  }
 }
 
-.manrope {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+/* Custom Scrollbar adhering to DESIGN.md */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #052C87;
+}
+::-webkit-scrollbar-thumb {
+  background: #0950F6;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 241, 46, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFF12E;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #logos svg {
