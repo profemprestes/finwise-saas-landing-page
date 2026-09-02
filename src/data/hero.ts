@@ -1,5 +1,8 @@
 export const heroDetails = {
-    heading: 'Smart, Secure, Simple Financial Management',
-    subheading: 'From effortless budgeting to real-time investment insights, Finwise puts you in control of your money like never before',
-    centerImageSrc: '/images/hero-mockup.webp',
-}
+    badge: "Tu Solución Confiable en Mar del Plata",
+    headingPart1: "Mensajería y Logística",
+    headingHighlight: "E-Commerce",
+    headingPart2: "en Mar del Plata",
+    subheading: "Somos tu partner estratégico en mensajería urbana, envíos en el día y delivery de última milla. Flota propia de motos, cero tercerización y respuesta inmediata.",
+    centerImageSrc: "/recursos_envios/pin_mapa.png",
+}

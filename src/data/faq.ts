@@ -1,25 +1,28 @@
 import { IFAQ } from "@/types";
-import { siteDetails } from "./siteDetails";
 
 export const faqs: IFAQ[] = [
     {
-        question: `Is ${siteDetails.siteName} secure?`,
-        answer: 'Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security.',
+        question: '¿Qué zonas de Mar del Plata cubren?',
+        answer: 'Cubrimos todo el Partido de General Pueyrredón: Centro, Güemes, Playa Grande, Puerto, Chauvín, Los Troncos, La Perla, Constitución, Camet, Batán, Acantilados, Chapadmalal y Sierra de los Padres.',
     },
     {
-        question: `Can I use ${siteDetails.siteName} on multiple devices?`,
-        answer: 'Absolutely! Your Finwise account syncs seamlessly across all your devices - smartphone, tablet, and computer.',
+        question: '¿Cuánto demora una entrega Express?',
+        answer: 'El servicio Express se realiza en un promedio de 30 a 90 minutos desde el retiro, asignando un cadete en moto exclusivo punto a punto.',
     },
     {
-        question: 'Can I connect all my bank accounts?',
-        answer: `Yes! ${siteDetails.siteName} supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts.`
+        question: '¿Cómo funciona Mercado Envíos Flex?',
+        answer: 'Pasamos a retirar todos los paquetes vendidos por tu local o depósito en el horario acordado y los entregamos en el transcurso de la tarde del mismo día.',
     },
     {
-        question: 'Do I need any financial expertise to use the investing features?',
-        answer: 'Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level.',
+        question: '¿Hacen cobranza contra entrega y rendición de dinero?',
+        answer: 'Sí, cobramos en efectivo o transferencias en el momento de la entrega al cliente y te rendimos el dinero de forma inmediata y segura.',
     },
     {
-        question: 'What if I need help using the app?',
-        answer: 'Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Finwise.'
+        question: '¿Qué es el Plan Emprendedores / 3PL?',
+        answer: 'Es un servicio integral donde guardamos tu stock en nuestro depósito, armamos los paquetes cuando vendés (picking & packing) y los despachamos sin que tengas que moverte.',
+    },
+    {
+        question: '¿Cómo puedo solicitar un envío o cotizar?',
+        answer: 'Podés cotizar de forma automática con nuestro cotizador web o enviarnos un mensaje directo a nuestro WhatsApp (+54 223 660-2699) para coordinar en el acto.',
     }
-];
+];

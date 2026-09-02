@@ -1,6 +1,7 @@
 export const ctaDetails = {
-    heading: 'Join Over 1 Million Users To Transform Your Finances',
-    subheading: 'Your journey to financial freedom starts here. Download Finwise today and take the first step towards a brighter financial future!',
-    appStoreUrl: '#',
-    googlePlayUrl: '#'
-}
+    heading: '¿Listo para optimizar tus envíos en Mar del Plata?',
+    subheading: 'Hablemos ahora por WhatsApp. Coordinamos retiros para tu comercio o despachamos tu envío express prioritario de inmediato.',
+    primaryButtonText: 'Pedir Envío por WhatsApp',
+    whatsappUrl: 'https://wa.me/542236602699',
+    phoneCall: 'tel:+542236602699',
+}

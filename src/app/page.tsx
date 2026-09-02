@@ -24,17 +24,17 @@ const HomePage: React.FC = () => {
         <Benefits />
 
         <Section
-          id="pricing"
-          title="Pricing"
-          description="Simple, transparent pricing. No surprises."
+          id="servicios-planes"
+          title="Nuestros Planes y Tarifas"
+          description="Servicios transparentes diseñados para particulares, comercios y tiendas online de Mar del Plata."
         >
           <Pricing />
         </Section>
 
         <Section
-          id="testimonials"
-          title="What Our Clients Say"
-          description="Hear from those who have partnered with us."
+          id="testimonios"
+          title="Lo Que Dicen Nuestros Clientes"
+          description="Comercios y marcas marplatenses que confían su logística diaria en nosotros."
         >
           <Testimonials />
         </Section>
@@ -50,3 +50,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+

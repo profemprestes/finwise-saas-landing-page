@@ -1,22 +1,21 @@
-import { BsBarChartFill, BsFillStarFill } from "react-icons/bs";
-import { PiGlobeFill } from "react-icons/pi";
+import { HiCube, HiShieldCheck, HiBuildingStorefront } from "react-icons/hi2";
 
 import { IStats } from "@/types";
 
 export const stats: IStats[] = [
     {
-        title: "20M+",
-        icon: <BsBarChartFill size={34} className="text-blue-500" />,
-        description: "Transactions processed securely every day, providing real-time insights."
+        title: "+50.000",
+        icon: <HiCube size={34} className="text-brand-yellow" />,
+        description: "Envíos y entregas completadas en todo Mar del Plata con máxima puntualidad."
     },
     {
-        title: "5.0",
-        icon: <BsFillStarFill size={34} className="text-yellow-500" />,
-        description: "Star rating, consistently maintained across app stores."
+        title: "0",
+        icon: <HiShieldCheck size={34} className="text-brand-yellow" />,
+        description: "Paquetes extraviados. Custodia total y trazabilidad garantizada en cada recorrido."
     },
     {
-        title: "200+ ",
-        icon: <PiGlobeFill size={34} className="text-green-600" />,
-        description: "Financial Institutions, seamlessly integrated, so you can manage all accounts."
+        title: "+100",
+        icon: <HiBuildingStorefront size={34} className="text-brand-yellow" />,
+        description: "Comercios, tiendas online y PyMEs que confían a diario en nuestra flota."
     }
-];
+];

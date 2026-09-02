@@ -2,36 +2,36 @@ import { IPricing } from "@/types";
 
 export const tiers: IPricing[] = [
     {
-        name: 'Starter',
-        price: 29,
+        name: 'Envío Express',
+        price: 'Desde $3.500',
         features: [
-            'Basic cloud integration',
-            'Up to 5 team members',
-            '20GB storage',
-            'Email support',
+            'Entrega prioritaria 30 a 90 min',
+            'Mensajero exclusivo punto a punto',
+            'Seguimiento en vivo y confirmación',
+            'Cobranza contra entrega disponible',
+            'Cobertura en todo Mar del Plata',
         ],
     },
     {
-        name: 'Pro',
-        price: 99,
+        name: 'Pack PyMEs LowCost',
+        price: 'Tarifa Plana',
         features: [
-            'Advanced cloud integration',
-            'Up to 20 team members',
-            '100GB storage',
-            'Priority email & phone support',
-            'Advanced analytics',
+            'Envíos en el día (Same-Day)',
+            'Retiro programado en tu comercio',
+            'Entregas por zonas optimizadas',
+            'Reporte diario de entregas',
+            'Soporte directo por WhatsApp',
         ],
     },
     {
-        name: 'Enterprise',
-        price: 'Custom',
+        name: 'MercadoLibre Flex & 3PL',
+        price: 'A Medida',
         features: [
-            'Full cloud integration',
-            'Unlimited team members',
-            'Unlimited storage',
-            '24/7 dedicated support',
-            'Custom solutions',
-            'On-site training',
+            'Logística oficial Mercado Envíos Flex',
+            'Guarda de stock en depósito propio',
+            'Picking & packing profesional',
+            'Rendición inmediata de dinero',
+            'Integración para tiendas online',
         ],
     },
-]
+];

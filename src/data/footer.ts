@@ -2,36 +2,73 @@ import { IMenuItem, ISocials } from "@/types";
 
 export const footerDetails: {
     subheading: string;
-    quickLinks: IMenuItem[];
+    servicesLinks: IMenuItem[];
+    companyLinks: IMenuItem[];
+    legalLinks: IMenuItem[];
     email: string;
     telephone: string;
+    phoneFormatted: string;
+    address: string;
     socials: ISocials;
 } = {
-    subheading: "Empowering businesses with cutting-edge financial technology solutions.",
-    quickLinks: [
+    subheading: "Logística y mensajería urbana e-commerce en Mar del Plata. Envíos express en moto, MercadoLibre Flex y soluciones para PyMEs.",
+    servicesLinks: [
         {
-            text: "Features",
-            url: "#features"
+            text: "Envíos Express (30-90 min)",
+            url: "/servicios/envios-express"
         },
         {
-            text: "Pricing",
-            url: "#pricing"
+            text: "Envíos LowCost en el Día",
+            url: "/servicios/envios-lowcost"
         },
         {
-            text: "Testimonials",
-            url: "#testimonials"
+            text: "Mercado Envíos Flex",
+            url: "/servicios/enviosflex"
+        },
+        {
+            text: "Plan Emprendedores & 3PL",
+            url: "/servicios/plan-emprendedores"
+        },
+        {
+            text: "Cotizador Online",
+            url: "/cotizar/express"
         }
     ],
-    email: 'address@yoursite.com',
-    telephone: '+1 (123) 456-7890',
+    companyLinks: [
+        {
+            text: "Sobre Nosotros",
+            url: "/sobre-nosotros"
+        },
+        {
+            text: "Preguntas Frecuentes",
+            url: "/preguntas-frecuentes"
+        },
+        {
+            text: "Nuestras Redes",
+            url: "/nuestras-redes"
+        },
+        {
+            text: "Contacto",
+            url: "/contacto"
+        }
+    ],
+    legalLinks: [
+        {
+            text: "Términos y Condiciones",
+            url: "/terminos-y-condiciones"
+        },
+        {
+            text: "Política de Privacidad",
+            url: "/politica-de-privacidad"
+        }
+    ],
+    email: 'contacto@enviosdosruedas.com.ar',
+    telephone: '+542236602699',
+    phoneFormatted: '223 660-2699',
+    address: 'Mar del Plata, Buenos Aires, Argentina',
     socials: {
-        // github: 'https://github.com',
-        // x: 'https://twitter.com/x',
-        twitter: 'https://twitter.com/Twitter',
         facebook: 'https://facebook.com',
-        // youtube: 'https://youtube.com',
-        linkedin: 'https://www.linkedin.com',
-        // threads: 'https://www.threads.net',
-        instagram: 'https://www.instagram.com',
+        instagram: 'https://instagram.com',
+        whatsapp: 'https://wa.me/542236602699',
     }
-}
+}

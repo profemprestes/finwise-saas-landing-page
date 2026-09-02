@@ -1,90 +1,165 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
-import { FaFingerprint } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { HiPhone, HiEnvelope, HiMapPin } from 'react-icons/hi2';
 
-import { siteDetails } from '@/data/siteDetails';
+import Container from './Container';
 import { footerDetails } from '@/data/footer';
-import { getPlatformIconByName } from '@/utils';
+import { siteDetails } from '@/data/siteDetails';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-brand-blue-deep/95 border-t border-brand-white/20 text-brand-white pt-14 pb-10">
-            <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div>
-                    <Link href="/" className="flex items-center gap-2.5 group focus:outline-none rounded-xl">
-                        <div className="w-9 h-9 rounded-xl bg-brand-blue border border-brand-yellow p-2 flex items-center justify-center text-brand-yellow shadow-glow-yellow">
-                            <FaFingerprint className="w-full h-full object-contain" />
+        <footer className="bg-brand-blue-deep border-t border-brand-white/20 text-brand-white pt-16 pb-12 relative z-20">
+            <Container>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-brand-white/15">
+                    {/* Brand column */}
+                    <div className="lg:col-span-4 space-y-4 text-left">
+                        <Link href="/" className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow rounded-xl">
+                            <div className="relative w-11 h-11 shrink-0 bg-brand-blue border border-brand-yellow rounded-xl p-1 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform shadow-glow-yellow">
+                                <Image 
+                                    src="/logo.webp" 
+                                    alt="Logo Envíos DosRuedas" 
+                                    width={44} 
+                                    height={44} 
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+                            <span className="font-display text-2xl lg:text-3xl tracking-tight leading-none uppercase flex items-center gap-1.5">
+                                <span className="text-brand-white">Envíos</span>
+                                <span className="text-brand-yellow">DosRuedas</span>
+                            </span>
+                        </Link>
+                        <p className="font-sans text-sm text-brand-white/80 leading-relaxed max-w-sm">
+                            {footerDetails.subheading}
+                        </p>
+                        {/* Redes */}
+                        <div className="flex items-center gap-3 pt-2">
+                            {footerDetails.socials.facebook && (
+                                <a 
+                                    href={footerDetails.socials.facebook} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="Facebook"
+                                    className="w-10 h-10 rounded-xl bg-brand-white/10 hover:bg-brand-yellow hover:text-brand-blue text-brand-white flex items-center justify-center transition-all duration-200"
+                                >
+                                    <FaFacebookF className="w-4 h-4" />
+                                </a>
+                            )}
+                            {footerDetails.socials.instagram && (
+                                <a 
+                                    href={footerDetails.socials.instagram} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                    className="w-10 h-10 rounded-xl bg-brand-white/10 hover:bg-brand-yellow hover:text-brand-blue text-brand-white flex items-center justify-center transition-all duration-200"
+                                >
+                                    <FaInstagram className="w-4 h-4" />
+                                </a>
+                            )}
+                            {footerDetails.socials.whatsapp && (
+                                <a 
+                                    href={footerDetails.socials.whatsapp} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="WhatsApp"
+                                    className="w-10 h-10 rounded-xl bg-brand-white/10 hover:bg-social-whatsapp hover:text-white text-brand-white flex items-center justify-center transition-all duration-200"
+                                >
+                                    <FaWhatsapp className="w-4 h-4" />
+                                </a>
+                            )}
                         </div>
-                        <span className="font-display text-2xl uppercase tracking-tight text-brand-white flex items-center gap-1">
-                            <span>Fin</span><span className="text-brand-yellow">wise</span>
-                        </span>
-                    </Link>
-                    <p className="mt-4 text-sm text-brand-white/80 font-sans font-light leading-relaxed max-w-sm">
-                        {footerDetails.subheading}
-                    </p>
-                </div>
-
-                <div>
-                    <h4 className="font-subheading text-base uppercase tracking-wider text-brand-yellow font-bold mb-4">
-                        Quick Links
-                    </h4>
-                    <ul className="space-y-2.5">
-                        {footerDetails.quickLinks.map(link => (
-                            <li key={link.text}>
-                                <Link href={link.url} className="text-sm text-brand-white/80 hover:text-brand-yellow font-sans font-light transition-colors">
-                                    {link.text}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-subheading text-base uppercase tracking-wider text-brand-yellow font-bold mb-4">
-                        Contact Us
-                    </h4>
-
-                    <div className="space-y-2 text-sm text-brand-white/80 font-sans font-light">
-                        {footerDetails.email && (
-                            <a href={`mailto:${footerDetails.email}`} className="block hover:text-brand-yellow transition-colors">
-                                Email: <span className="font-mono text-brand-white">{footerDetails.email}</span>
-                            </a>
-                        )}
-
-                        {footerDetails.telephone && (
-                            <a href={`tel:${footerDetails.telephone}`} className="block hover:text-brand-yellow transition-colors">
-                                Phone: <span className="font-mono text-brand-white">{footerDetails.telephone}</span>
-                            </a>
-                        )}
                     </div>
 
-                    {footerDetails.socials && (
-                        <div className="mt-5 flex items-center gap-3 flex-wrap">
-                            {Object.keys(footerDetails.socials).map(platformName => {
-                                if (platformName && footerDetails.socials[platformName]) {
-                                    return (
-                                        <Link
-                                            href={footerDetails.socials[platformName]}
-                                            key={platformName}
-                                            aria-label={platformName}
-                                            className="w-9 h-9 rounded-xl bg-brand-white/10 hover:bg-brand-yellow hover:text-brand-blue text-brand-white flex items-center justify-center transition-all duration-200"
-                                        >
-                                            {getPlatformIconByName(platformName)}
-                                        </Link>
-                                    );
-                                }
-                            })}
-                        </div>
-                    )}
-                </div>
-            </div>
+                    {/* Servicios column */}
+                    <div className="lg:col-span-3 text-left space-y-3">
+                        <h4 className="font-subheading uppercase tracking-wider text-brand-yellow text-base font-bold">
+                            Servicios
+                        </h4>
+                        <ul className="space-y-2 text-sm font-sans">
+                            {footerDetails.servicesLinks.map((link) => (
+                                <li key={link.text}>
+                                    <Link href={link.url} className="text-brand-white/80 hover:text-brand-yellow transition-colors block py-0.5">
+                                        {link.text}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-            <div className="mt-12 pt-8 border-t border-brand-white/10 text-center text-xs text-brand-white/60 px-4 space-y-1 font-mono">
-                <p>Copyright &copy; {new Date().getFullYear()} {siteDetails.siteName}. All rights reserved.</p>
-                <p className="text-[11px] text-brand-white/40">Made with &hearts; by <a href="https://nexilaunch.com" target="_blank" className="hover:text-brand-yellow">Nexi Launch</a> · UI kit by <a href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit" target="_blank" className="hover:text-brand-yellow">Youthmind</a></p>
-            </div>
+                    {/* Empresa column */}
+                    <div className="lg:col-span-2 text-left space-y-3">
+                        <h4 className="font-subheading uppercase tracking-wider text-brand-yellow text-base font-bold">
+                            Empresa
+                        </h4>
+                        <ul className="space-y-2 text-sm font-sans">
+                            {footerDetails.companyLinks.map((link) => (
+                                <li key={link.text}>
+                                    <Link href={link.url} className="text-brand-white/80 hover:text-brand-yellow transition-colors block py-0.5">
+                                        {link.text}
+                                    </Link>
+                                </li>
+                            ))}
+                            {footerDetails.legalLinks.map((link) => (
+                                <li key={link.text}>
+                                    <Link href={link.url} className="text-brand-white/60 hover:text-brand-yellow text-xs transition-colors block py-0.5">
+                                        {link.text}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contacto directo column */}
+                    <div className="lg:col-span-3 text-left space-y-3">
+                        <h4 className="font-subheading uppercase tracking-wider text-brand-yellow text-base font-bold">
+                            Contacto Directo
+                        </h4>
+                        <ul className="space-y-2.5 text-sm font-sans">
+                            <li>
+                                <a href={siteDetails.phoneCall} className="flex items-center gap-2.5 text-brand-white/90 hover:text-brand-yellow transition-colors font-mono font-medium">
+                                    <HiPhone className="w-4 h-4 text-brand-yellow shrink-0" />
+                                    <span>{footerDetails.phoneFormatted}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={`mailto:${footerDetails.email}`} className="flex items-center gap-2.5 text-brand-white/90 hover:text-brand-yellow transition-colors">
+                                    <HiEnvelope className="w-4 h-4 text-brand-yellow shrink-0" />
+                                    <span>{footerDetails.email}</span>
+                                </a>
+                            </li>
+                            <li className="flex items-center gap-2.5 text-brand-white/80">
+                                <HiMapPin className="w-4 h-4 text-brand-yellow shrink-0" />
+                                <span>{footerDetails.address}</span>
+                            </li>
+                        </ul>
+                        <div className="pt-2">
+                            <a 
+                                href={siteDetails.whatsappUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-yellow text-brand-blue font-subheading uppercase tracking-wider text-xs font-bold hover:bg-brand-yellow-hover hover:shadow-glow-yellow transition-all"
+                            >
+                                <FaWhatsapp className="text-base" />
+                                <span>WhatsApp En Vivo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Bottom Bar */}
+                <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-sans text-brand-white/60">
+                    <p>
+                        © {new Date().getFullYear()} Envíos DosRuedas · Todos los derechos reservados. Mar del Plata, Argentina.
+                    </p>
+                    <p className="font-mono text-[11px]">
+                        Logística Urbana & E-Commerce
+                    </p>
+                </div>
+            </Container>
         </footer>
     );
 };
 
 export default Footer;
+

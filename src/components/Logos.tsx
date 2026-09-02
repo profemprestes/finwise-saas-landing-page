@@ -2,9 +2,9 @@ import React from "react";
 
 const Logos: React.FC = () => {
     return (
-        <section id="logos" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-brand-blue-deep/60 border-y border-brand-white/15 relative z-10">
+        <section id="logos" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-brand-blue-deep/90 border-y border-brand-white/15 relative z-10">
             <p className="text-xs sm:text-sm font-subheading uppercase tracking-widest text-center text-brand-white/80">
-                Trusted by <span className="text-brand-yellow font-bold">2000+</span> businesses & partners
+                Logística de confianza para <span className="text-brand-yellow font-bold">+100 Comercios & Emprendedores</span> en Mar del Plata
             </p>
             <div className="mt-8 w-full max-w-6xl mx-auto flex flex-wrap flex-row items-center justify-center sm:justify-between gap-6 sm:gap-10 text-brand-white/60">
                 {/* Notion */}

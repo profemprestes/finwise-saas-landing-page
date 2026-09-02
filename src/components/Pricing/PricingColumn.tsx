@@ -44,18 +44,20 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
                         )}
                     </div>
 
-                    <button
-                        type="button"
+                    <a
+                        href="https://wa.me/542236602699"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={clsx(
-                            "w-full py-3.5 px-6 rounded-full font-subheading uppercase tracking-wider text-xs font-bold transition-all duration-300 mb-8 cursor-pointer",
+                            "w-full block text-center py-3.5 px-6 rounded-full font-subheading uppercase tracking-wider text-xs font-bold transition-all duration-300 mb-8 cursor-pointer",
                             {
                                 "bg-brand-yellow text-brand-blue hover:bg-brand-yellow-hover hover:shadow-glow-yellow shadow-md": highlight,
                                 "bg-brand-white/10 hover:bg-brand-white/20 text-brand-white border border-brand-white/30": !highlight
                             }
                         )}
                     >
-                        Get Started
-                    </button>
+                        Solicitar Servicio
+                    </a>
 
                     <div className="pt-4 border-t border-brand-white/15">
                         <p className="font-subheading uppercase tracking-wider text-xs font-bold text-brand-white/70 mb-1">

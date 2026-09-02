@@ -1,12 +1,18 @@
 export const siteDetails = {
-    siteName: 'Finwise',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'Envíos DosRuedas',
+    siteUrl: 'https://enviosdosruedas.com.ar',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'Envíos DosRuedas · Mensajería y Logística E-Commerce en Mar del Plata',
+        description: 'Mensajería express y logística en moto para comercios y e-commerce en Mar del Plata. Envíos en el día, Mercado Libre Flex, tarifas transparentes y soporte directo por WhatsApp.',
     },
-    language: 'en-us',
-    locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/images/logo.png`, // or use a string for the logo e.g. "TechStartup"
-    googleAnalyticsId: '', // e.g. G-XXXXXXX,
-}
+    language: 'es-AR',
+    locale: 'es-AR',
+    siteLogo: '/logo.webp',
+    phone: '+54 223 660-2699',
+    phoneFormatted: '223 660-2699',
+    phoneCall: 'tel:+542236602699',
+    whatsappUrl: 'https://wa.me/542236602699',
+    whatsappNumber: '542236602699',
+    address: 'Mar del Plata, Buenos Aires, Argentina',
+    googleAnalyticsId: '',
+}

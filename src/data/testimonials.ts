@@ -1,23 +1,22 @@
 import { ITestimonial } from "@/types";
-import { siteDetails } from "./siteDetails";
 
 export const testimonials: ITestimonial[] = [
     {
-        name: 'John Smith',
-        role: 'CEO at Company',
-        message: `${siteDetails.siteName}'s AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.`,
-        avatar: '/images/testimonial-1.webp',
+        name: 'Martín Rodríguez',
+        role: 'Tienda de Ropa Güemes (MDQ)',
+        message: 'Desde que usamos Envíos DosRuedas para nuestras entregas de MercadoLibre Flex en Mar del Plata, nunca más tuvimos un reclamo por demoras. Retiran puntuales y entregan en el día con total prolijidad.',
+        avatar: '/cards/hero_express.webp',
     },
     {
-        name: 'Jane Doe',
-        role: 'CTO at Startup',
-        message: `As a CTO, I'm impressed by ${siteDetails.siteName}'s robust security measures and seamless integrations. It's rare to find an app that balances user-friendliness with such advanced technology.`,
-        avatar: '/images/testimonial-2.webp',
+        name: 'Lucía Fernández',
+        role: 'Emprendimiento Cosmética Natural',
+        message: 'El servicio de 3PL y depósito nos cambió la vida. Ellos guardan nuestros productos, arman el paquete cuando entra una venta y lo despachan al instante. 100% recomendados.',
+        avatar: '/cards/hero_flex.webp',
     },
     {
-        name: 'Emily Johnson',
-        role: 'Product Manager',
-        message: `${siteDetails.siteName} is revolutionizing personal finance management. Its intuitive design and powerful features make it an indispensable tool for anyone serious about financial growth.`,
-        avatar: '/images/testimonial-3.webp',
+        name: 'Gonzalo Ramos',
+        role: 'Comercio Mayorista Constitución',
+        message: 'Excelente atención de los cadetes y coordinación directa por WhatsApp. Cobran contra entrega y rinden el dinero sin vueltas. Es el mejor servicio de logística urbana de la ciudad.',
+        avatar: '/cards/hero_lowcost.webp',
     },
-];
+];
