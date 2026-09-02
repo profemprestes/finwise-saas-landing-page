@@ -1,6 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme {
+  --color-brand-blue: #0950F6;
+  --color-brand-blue-deep: #052C87;
+  --color-brand-navy: #052C87;
+  --color-brand-yellow: #FFF12E;
+  --color-brand-yellow-hover: #FFF44A;
+  --color-brand-canvas: #F8FAFC;
+  --color-brand-white: #FFFFFF;
+  --color-social-facebook: #1877F2;
+  --color-social-whatsapp: #25D366;
+
+  --font-sans: var(--font-outfit), 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-anton), 'Anton', sans-serif;
+  --font-subheading: var(--font-bebas-neue), "Bebas Neue", sans-serif;
+  --font-mono: var(--font-geist-mono), "Geist Mono", monospace;
+
+  --shadow-glow-yellow: 0 0 25px rgba(255, 241, 46, 0.40);
+  --shadow-glow-yellow-lg: 0 0 50px rgba(255, 241, 46, 0.55);
+  --shadow-glow-blue: 0 0 25px rgba(9, 80, 246, 0.30);
+  --shadow-glow-fb: 0 0 25px rgba(24, 119, 242, 0.50);
+  --shadow-glow-ig: 0 0 25px rgba(225, 48, 108, 0.50);
+  --shadow-glow-wa: 0 0 25px rgba(37, 211, 102, 0.50);
+  --shadow-antigravity-deep: 0 30px 60px -15px rgba(9, 80, 246, 0.35), 0 0 50px -10px rgba(255, 241, 46, 0.20);
+}
 
 :root {
   --background: #0950F6;
@@ -20,23 +44,37 @@
 }
 
 html {
-  @apply scroll-smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-  @apply text-base bg-brand-blue text-brand-white font-sans selection:bg-brand-yellow selection:text-brand-blue overflow-x-hidden min-h-screen flex flex-col antialiased;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background-color: #0950F6;
+  color: #FFFFFF;
+  font-family: var(--font-outfit), 'Outfit', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  .-rotate-1 {
-    transform: rotate(-1deg);
-  }
-  .rotate-1 {
-    transform: rotate(1deg);
-  }
+::selection {
+  background-color: #FFF12E;
+  color: #0950F6;
+}
+
+.-rotate-1 {
+  transform: rotate(-1deg);
+}
+
+.rotate-1 {
+  transform: rotate(1deg);
+}
+
+.text-balance {
+  text-wrap: balance;
 }
 
 /* Custom Scrollbar adhering to DESIGN.md */
@@ -64,9 +102,16 @@ body {
 }
 
 #logos svg {
-  @apply w-fit h-10 sm:h-12;
+  width: fit-content;
+  height: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  #logos svg {
+    height: 3rem;
+  }
 }
 
 .benefit-section:last-of-type > div {
-  @apply mb-10;
+  margin-bottom: 2.5rem;
 }
