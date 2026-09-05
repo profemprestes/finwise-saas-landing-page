@@ -1,0 +1,92 @@
+{
+  "name": "projects/4498614186018411668",
+  "projectId": "4498614186018411668",
+  "title": "Envíos DosRuedas",
+  "visibility": "PRIVATE",
+  "createTime": "2026-09-05T12:15:16.420013Z",
+  "updateTime": "2026-09-05T12:31:40.332852Z",
+  "projectType": "PROJECT_DESIGN",
+  "origin": "STITCH",
+  "activeDesignSystem": {
+    "assetId": "fdeaf624907046ec9157ea8db04441fd",
+    "name": "assets/fdeaf624907046ec9157ea8db04441fd",
+    "sourceScreen": "projects/4498614186018411668/screens/16760668018317120428",
+    "title": "enviosdosruedas_final"
+  },
+  "screens": {
+    "enviosdosruedas_final": {
+      "id": "16760668018317120428",
+      "sourceScreen": "projects/4498614186018411668/screens/16760668018317120428",
+      "type": "DESIGN_SYSTEM_DOC",
+      "width": 390,
+      "height": 884
+    },
+    "HERO": {
+      "id": "11108770168879288121",
+      "sourceScreen": "projects/4498614186018411668/screens/11108770168879288121",
+      "width": 704,
+      "height": 427
+    },
+    "NAVBAR": {
+      "id": "11569486335826221527",
+      "sourceScreen": "projects/4498614186018411668/screens/11569486335826221527",
+      "width": 704,
+      "height": 41
+    },
+    "VISION": {
+      "id": "13868527358176757969",
+      "sourceScreen": "projects/4498614186018411668/screens/13868527358176757969",
+      "width": 704,
+      "height": 438
+    },
+    "EMPRENDEDORES": {
+      "id": "15444274590111849603",
+      "sourceScreen": "projects/4498614186018411668/screens/15444274590111849603",
+      "width": 704,
+      "height": 547
+    },
+    "REDES": {
+      "id": "15585108841198141577",
+      "sourceScreen": "projects/4498614186018411668/screens/15585108841198141577",
+      "width": 704,
+      "height": 391
+    },
+    "FOOTER": {
+      "id": "1984084266401142305",
+      "sourceScreen": "projects/4498614186018411668/screens/1984084266401142305",
+      "width": 704,
+      "height": 399
+    },
+    "SOCIOS": {
+      "id": "5778612170199781976",
+      "sourceScreen": "projects/4498614186018411668/screens/5778612170199781976",
+      "width": 704,
+      "height": 892
+    },
+    "SERVICIOS": {
+      "id": "7601265676892258122",
+      "sourceScreen": "projects/4498614186018411668/screens/7601265676892258122",
+      "width": 704,
+      "height": 533
+    },
+    "RESENA": {
+      "id": "8658295928933268513",
+      "sourceScreen": "projects/4498614186018411668/screens/8658295928933268513",
+      "width": 704,
+      "height": 604
+    },
+    "index": {
+      "id": "ee6fcde77c6841f191c6db98ad83c9bf",
+      "sourceScreen": "projects/4498614186018411668/screens/ee6fcde77c6841f191c6db98ad83c9bf",
+      "title": "Envíos DosRuedas - Landing Page Principal (MDQ)",
+      "type": "LANDING_PAGE",
+      "width": 2560,
+      "height": 6194,
+      "canvasX": 0,
+      "canvasY": 1592
+    }
+  },
+  "metadata": {
+    "userRole": "OWNER"
+  }
+}
