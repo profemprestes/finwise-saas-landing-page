@@ -12,6 +12,7 @@ const outfit = Outfit({
   subsets: ['latin'],
   variable: '--font-outfit',
   display: 'swap',
+  preload: true,
 });
 
 const anton = Anton({
@@ -19,6 +20,7 @@ const anton = Anton({
   subsets: ['latin'],
   variable: '--font-anton',
   display: 'swap',
+  preload: true,
 });
 
 const bebasNeue = Bebas_Neue({
@@ -26,12 +28,14 @@ const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
   variable: '--font-bebas-neue',
   display: 'swap',
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   subsets: ['latin'],
   variable: '--font-geist-mono',
   display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
